@@ -3,8 +3,13 @@
   padding: 16px;
   margin: 16px;
   border-radius: 16px;
-  box-shadow: 4px 4px white;
   text-align: center;
+  transition: 0.15s all;
+}
+
+.card:hover {
+  box-shadow: 4px 4px white;
+  translate: -4px -4px;
 }
 
 .card > h2 {
