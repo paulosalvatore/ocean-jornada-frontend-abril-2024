@@ -24,9 +24,11 @@ function App() {
 
   return (
     <>
-      {itens.map(function (elemento) {
-        return <Card item={elemento} />
-      })}
+      <div className="cards">
+        {itens.map(function (elemento) {
+          return <Card item={elemento} />
+        })}
+      </div>
     </>
   )
 }
