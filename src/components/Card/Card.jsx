@@ -8,9 +8,9 @@ export default function Card(props) {
             <h2>{item.name}</h2>
 
             <div className="tags">
-                <Tag text="Status: Vivo" />
-                <Tag text="Espécie: Humana" />
-                <Tag text="Origem: Terra C-137" />
+                {item.tags.map(function (tag) {
+                    return <Tag text={tag} />
+                })}
             </div>
 
             <img src={item.image} />
