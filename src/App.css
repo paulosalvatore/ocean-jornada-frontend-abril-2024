@@ -5,6 +5,8 @@
   border-radius: 16px;
   text-align: center;
   transition: 0.15s all;
+  cursor: pointer;
+  width: 300px;
 }
 
 .card:hover {
@@ -13,9 +15,27 @@
 }
 
 .card > h2 {
+  border-left: 8px solid #A9D3E9;
   font-size: 32px;
 }
 
 .card > img {
   border-radius: 16px;
+}
+
+.card > .tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tags > div {
+  background: white;
+  color: black;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 12px;
 }
