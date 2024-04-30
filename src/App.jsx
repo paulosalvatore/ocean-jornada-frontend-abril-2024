@@ -24,7 +24,7 @@ function App() {
     <>
       <div className="cards">
         {itens.map(function (elemento) {
-          return <Card item={elemento} />
+          return <Card item={elemento} key={`card_${elemento.id}`} />
         })}
       </div>
     </>

@@ -9,7 +9,7 @@ export default function Card(props) {
 
             <div className="tags">
                 {item.tags?.map(function (tag) {
-                    return <Tag text={tag} />
+                    return <Tag text={tag} key={`tag_${tag}`} />
                 })}
             </div>
 
