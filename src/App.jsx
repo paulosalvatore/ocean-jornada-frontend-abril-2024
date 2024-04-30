@@ -1,34 +1,14 @@
-import { useEffect, useState } from 'react'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './App.css'
-import Card from './components/Card/Card'
+import ReadAll from './pages/ReadAll/ReadAll'
 
-function App() {
-  const [itens, setItens] = useState([])
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <ReadAll />
+  }
+])
 
-  const apiUrl = 'https://rickandmortyapi.com/api/character/'
-
-  useEffect(function () {
-    async function carregarDados() {
-      const response = await fetch(apiUrl)
-
-      const data = await response.json()
-
-      const results = data.results
-      setItens(results)
-    }
-
-    carregarDados()
-  }, [])
-
-  return (
-    <>
-      <div className="cards">
-        {itens.map(function (elemento) {
-          return <Card item={elemento} key={`card_${elemento.id}`} />
-        })}
-      </div>
-    </>
-  )
+export default function App() {
+  return <RouterProvider router={router} />
 }
-
-export default App
