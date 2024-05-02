@@ -2,6 +2,14 @@
   width: 100%;
 }
 
+.header {
+  width: 100%;
+  background: white;
+  padding: 16px;
+  position: fixed;
+  top: 0;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;

@@ -38,7 +38,10 @@ export default function Create() {
 
   return (
     <>
-      <Link to="/">Home</Link>
+      <div className="header">
+        <Link to="/">Home</Link>
+      </div>
+
       <div>
         <form onSubmit={onSubmit}>
           <label htmlFor="name">Nome:</label>

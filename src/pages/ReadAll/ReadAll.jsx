@@ -21,7 +21,10 @@ export default function ReadAll() {
   
     return (
       <>
-        <Link to="/criar">Criar</Link>
+        <div className="header">
+          <Link to="/criar">Criar</Link>
+        </div>
+
         <div className="cards">
           {itens.map(function (elemento) {
             return <Card item={elemento} key={`card_${elemento._id}`} />
