@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Card from '../../components/Card/Card'
+import { Link } from 'react-router-dom'
 
 export default function ReadAll() {
     const [itens, setItens] = useState([])
@@ -20,6 +21,7 @@ export default function ReadAll() {
   
     return (
       <>
+        <Link to="/criar">Criar</Link>
         <div className="cards">
           {itens.map(function (elemento) {
             return <Card item={elemento} key={`card_${elemento._id}`} />
