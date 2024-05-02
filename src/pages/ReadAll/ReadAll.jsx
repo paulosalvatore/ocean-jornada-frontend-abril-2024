@@ -4,7 +4,7 @@ import Card from '../../components/Card/Card'
 export default function ReadAll() {
     const [itens, setItens] = useState([])
   
-    const apiUrl = 'https://rickandmortyapi.com/api/character/'
+    const apiUrl = 'https://ocean-jornada-backend-abril-2024.onrender.com/item'
   
     useEffect(function () {
       async function carregarDados() {
@@ -12,8 +12,7 @@ export default function ReadAll() {
   
         const data = await response.json()
   
-        const results = data.results
-        setItens(results)
+        setItens(data)
       }
   
       carregarDados()
@@ -23,7 +22,7 @@ export default function ReadAll() {
       <>
         <div className="cards">
           {itens.map(function (elemento) {
-            return <Card item={elemento} key={`card_${elemento.id}`} />
+            return <Card item={elemento} key={`card_${elemento._id}`} />
           })}
         </div>
       </>
